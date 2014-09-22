@@ -1,0 +1,27 @@
+(define
+    (square x)
+        (* x x)
+)
+
+(define 
+    (larger x y)
+        (if (> x y) x y)
+)
+
+(define
+    (sum-of-squares x y)
+        (+ (square x) (square y))
+)
+
+(define 
+    (largest-two-sum-of-squares x y z)
+        (if (= x (larger x y))
+            (sum-of-squares x (larger y z)) (sum-of-squares y (larger x z))
+        )
+)
+
+
+;; Testing
+
+(largest-two-sum-of-squares 1 2 3)
+(largest-two-sum-of-squares 5 9 2) 
